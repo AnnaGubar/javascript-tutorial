@@ -1,5 +1,9 @@
 // *** Скрипт обьединяющий все эл-ты массива в одно строковое значение *** /
 
+console.log(['JS', 'is', 'awesome'].join(' ')); // JS is awesome
+
+console.log('---------------------');
+
 const friends = ['Mango', 'Poly', 'Kiwi', 'Ajax'];
 // let string = '';
 
@@ -29,3 +33,5 @@ const title = 'Top 10 benefits of React framework';
 
 const slug1 = title.toLowerCase().split(' ').join('-');
 console.log(slug1);
+
+console.log('---------------------');
