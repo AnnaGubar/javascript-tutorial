@@ -79,24 +79,50 @@ console.log('----------------------');
 
 //* самое длинное слово в строке
 
+// function findLongestWord(string) {
+//   const array = string.split(' ');
+
+//   // console.log(x);
+
+//   let wordIndex = 0;
+//   let wordValue = '';
+
+//   for (let i = 0; i < array.length; i += 1) {
+//     if (array[i].length > wordIndex) {
+//       wordIndex = array[i].length;
+//       // console.log(wordIndex, array[i]);
+//       wordValue = array[i];
+//       // console.log(wordValue);
+//     }
+//   }
+
+//   return wordValue;
+// }
+
+// function findLongestWord(string) {
+//   const str = string.split(' ');
+//   let longStr = '';
+
+//   for (let i = 0; i < str.length; i++) {
+//     if (longStr.length < str[i].length) {
+//       longStr = str[i];
+//     }
+//   }
+
+//   return longStr;
+// }
+
 function findLongestWord(string) {
-  const array = string.split(' ');
+  const str = string.split(' ');
+  let longStr = '';
 
-  // console.log(x);
-
-  let wordIndex = 0;
-  let wordValue = '';
-
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i].length > wordIndex) {
-      wordIndex = array[i].length;
-      // console.log(wordIndex, array[i]);
-      wordValue = array[i];
-      // console.log(wordValue);
+  for (const word of str) {
+    if (word.length > longStr.length) {
+      longStr = word;
     }
   }
 
-  return wordValue;
+  return longStr;
 }
 
 console.log(findLongestWord('The quick brown fox jumped over the lazy dog')); //jumped
