@@ -5,8 +5,7 @@
 //*Math.random()*(max-min)+min - диапазон случайных чисел
 //*Math.round(число для округления)
 
-
-// let x = '50px'; 
+// let x = '50px';
 // let x = '50.24px';
 // let x = '5a0px';
 // let x = 'a50px';
@@ -23,12 +22,13 @@ let salary = 1300.16472;
 // console.log(salary);                //упрощенный вид
 console.log(Number(salary.toFixed(2)));
 
-console.log(Number('fesgrdhft'));      //NaN
+console.log(Number('fesgrdhft')); //NaN
 
-console.log(Math.pow(2, 8));           //256
-console.log(2**8);                     //256
+console.log(Math.pow(2, 8)); //256
+console.log(2 ** 8); //256
 
 //*Задача*
+
 /*Напиши скрипт который просит пользователя ввести число и степень, 
 возводит число в эту степень и выводит результат в консоль.*/
 
@@ -39,7 +39,6 @@ console.log(2**8);                     //256
 //3.возвести число в степень и вывести в консоль
 // console.log(Math.pow(base, pow));
 
-
 const max = 30;
 const min = 50;
 const result = Math.random() * (max - min) + min;
@@ -48,14 +47,13 @@ console.log(Math.round(result));
 
 console.log('--------------------------');
 
-console.log('5' - 3);      //2
-console.log('5' + 3);      //53
-console.log('5' - '4');    //1
-console.log('5' + + '4');  //54
-console.log('foo' + + 'foo');  //fooNaN
-console.log('5' + - '2');  //5-2
-console.log('5' + - + - - + - - + + - + - + - + - - - '-2'); //52
+console.log('5' - 3); //2
+console.log('5' + 3); //53
+console.log('5' - '4'); //1
+console.log('5' + +'4'); //54
+console.log('foo' + +'foo'); //fooNaN
+console.log('5' + -'2'); //5-2
+console.log('5' + -+-(-+-(-+(+-+-+-+-(-(-'-2')))))); //52
 const z = 3;
-console.log('5' + z - z);  //50
-console.log('5' - z + z);  //5
-
+console.log('5' + z - z); //50
+console.log('5' - z + z); //5
