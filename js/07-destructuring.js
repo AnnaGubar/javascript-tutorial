@@ -163,3 +163,22 @@ console.log(
     tomorrow: { low: 25, high: 29 },
   }),
 );
+
+//* hasOwnProperty()
+{
+  const document = {
+    title: 'The last kingdom',
+    author: 'Bernard Cornwell',
+    genres: ['historical prose', 'adventure'],
+    rating: 8.38,
+  };
+
+  const { genres, rating, ...otherInfo } = document;
+  console.log(otherInfo); // title: ..., author: ...
+
+  for (const key in document) {
+    if (otherInfo.hasOwnProperty(key)) {
+      console.log(`key: ${key}: ${document[key]}`);
+    }
+  }
+}

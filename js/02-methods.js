@@ -42,3 +42,84 @@ console.log(playList1); // ['track-1', 'track-2', 'track-3', 'Новый тре�
 
 playList1.updateRating(40);
 console.log(playList1);
+
+console.log('--------------------');
+
+//* Компания - добавление,удаление
+
+const employee1 = {
+  id: 1,
+  name: 'Tom',
+  salary: 2000,
+  bonus: 100,
+};
+
+const employee2 = {
+  id: 2,
+  name: 'John',
+  salary: 4000,
+};
+
+const employee3 = {
+  id: 3,
+  name: 'John',
+  salary: 4000,
+};
+
+const company = {
+  employees: [],
+  budget: 60000,
+  income: 0,
+  addEmployee: function (employee) {
+    this.employees.push(employee);
+  },
+
+  deleteEmployee(id) {
+    const newEmployeesList = [];
+
+    for (const employee of this.employees) {
+      if (employee.id !== id) {
+        newEmployeesList.push(employee);
+      }
+    }
+    this.employees = newEmployeesList;
+  },
+
+  calcSalary() {
+    let sum = 0;
+
+    for (const employee of this.employees) {
+      const bonus = employee.bonus ? employee.bonus : 0;
+      sum += employee.salary + bonus;
+    }
+    return sum;
+  },
+
+  calcIncome() {
+    const employeeSalary = this.calcSalary();
+
+    this.income = this.budget - employeeSalary;
+  },
+};
+
+company.addEmployee(employee1);
+company.addEmployee(employee2);
+company.addEmployee(employee3);
+
+company.deleteEmployee(2);
+
+console.log(company);
+// console.log(company.calcSalary());
+console.log(company.calcIncome());
+console.log(company);
+
+// !!!
+
+const calcSalary1 = company.calcSalary();
+console.log(calcSalary1); // 6100
+
+const calcSalary2 = company.calcSalary;
+console.log(calcSalary2); // развернет функ-ю calcSalary()
+
+// const calcSalary3 = company.calcSalary;
+// console.log(calcSalary3()); // Cannot read properties of undefined (reading 'employees')

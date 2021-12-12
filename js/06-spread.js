@@ -52,3 +52,38 @@ console.log(
 //{ category: "Homemade", priority: "Low", text: "Take out the trash", completed: false }
 console.log(makeTask({ text: 'Buy bread' }));
 //{ category: "General", priority: "Normal", text: "Buy bread", completed: false }
+
+console.log('--------------------');
+
+//* Вернуть копию обьекта либо массива
+
+const copyInstance = function (instance) {
+  if (Array.isArray(instance)) {
+    return [...instance];
+  }
+
+  return { ...instance };
+};
+
+const array = [20, 22, 11, 15];
+const newArray = copyInstance(array);
+
+console.log(`Is equal - ${newArray === array}`); // false
+
+//* поверхностное копирование
+
+const users = [
+  {
+    name: 'Alex',
+  },
+  {
+    name: 'John',
+  },
+];
+
+const newUsers = [...users];
+console.log(users === newUsers); // false
+
+newUsers[0].name = 'Potato';
+console.log(newUsers);
+console.log(users);
