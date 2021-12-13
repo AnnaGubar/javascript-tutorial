@@ -1,1 +1,1 @@
-# Обьект
+# Callback-functions
