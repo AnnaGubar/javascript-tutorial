@@ -80,3 +80,26 @@ const tagsStats = allTags2.reduce((acc, tag) => {
 }, {});
 
 console.log(tagsStats);
+
+console.log('---------------------');
+
+//* Реализация метода reduce
+
+const callback = (x, tweet) => {
+  console.log(x + tweet.likes);
+  return x + tweet.likes;
+};
+
+const reduce = (array, cb, value) => {
+  let acc = value ?? array[0];
+  // let acc = value ? value : array[0]; // ????????
+  const index = value || value === 0 ? 0 : 1;
+
+  for (let i = index; i < array.length; i++) {
+    acc = cb(acc, array[i], i, array);
+  }
+
+  return acc;
+};
+
+console.log(reduce(tweets, callback, 0));

@@ -33,3 +33,23 @@ const playerNameToFind = 'Poly';
 const playerWithName = players.find(player => player.name === playerNameToFind);
 
 console.log(playerWithName);
+
+console.log('-------------------');
+
+//* Реализация метода find
+
+const callback = player => player.name === 'Ajax';
+
+const findName = (array, cb) => {
+  let result;
+
+  for (let i = 0; i < array.length; i++) {
+    if (cb(array[i], i, array)) {
+      result = array[i];
+      // break;
+    }
+  }
+  return result;
+};
+
+console.log(findName(players, callback));

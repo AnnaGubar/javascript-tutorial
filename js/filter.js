@@ -48,3 +48,22 @@ const uniqueCourses = array.filter(
 console.log(uniqueCourses);
 
 console.log('-------------------');
+
+//* Реализация метода filter
+
+const filterByPrice = player => player.points > 50;
+
+const filteredArray = (array, cb) => {
+  let result = [];
+
+  for (let i = 0; i < array.length; i++) {
+    const isSelected = cb(array[i], i, array);
+
+    if (isSelected) {
+      result.push(array[i]);
+    }
+  }
+  return result;
+};
+
+console.log(filteredArray(players, filterByPrice));

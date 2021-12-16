@@ -65,3 +65,30 @@ const findPlayer = players.map(player =>
 );
 
 console.table(findPlayer);
+
+console.log('-------------------');
+
+//* реализация метода map
+
+const callback = ({ points }) => points;
+
+const map = (array, cb) => {
+  let result = [];
+
+  for (let i = 0; i < array.length; i++) {
+    const newItem = cb(array[i], i, array);
+    result.push(newItem);
+  }
+
+  return result;
+};
+
+console.log(map(players, callback));
+
+const logger = (player, index, array) => {
+  console.log(
+    `array.length - ${array.length}, index - ${index}, player - ${player.name}`,
+  );
+};
+
+map(players, logger);
