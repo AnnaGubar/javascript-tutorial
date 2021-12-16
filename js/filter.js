@@ -27,3 +27,24 @@ console.table(offlinePlayers);
 
 const hardcorePlayers = players.filter(player => player.timePlayed > 250);
 console.table(hardcorePlayers);
+
+console.log('-------------------');
+
+//* массив с уникальными значениями
+
+const array = [
+  'математика',
+  'физика',
+  'информатика',
+  'математика',
+  'физика',
+  'биология',
+];
+
+const uniqueCourses = array.filter(
+  (course, index, array) => array.indexOf(course) === index,
+);
+
+console.log(uniqueCourses);
+
+console.log('-------------------');
