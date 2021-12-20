@@ -53,3 +53,5 @@ const findName = (array, cb) => {
 };
 
 console.log(findName(players, callback));
+
+console.log('-------------------');

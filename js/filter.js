@@ -67,3 +67,58 @@ const filteredArray = (array, cb) => {
 };
 
 console.log(filteredArray(players, filterByPrice));
+
+console.log('-------------------');
+
+//* поиск и создание массива с уникальными значениями
+
+const students = [
+  { name: 'Mango', courses: ['mathematics', 'physics'] },
+  { name: 'Poly', courses: ['science', 'mathematics'] },
+  { name: 'Kiwi', courses: ['physics', 'biology'] },
+];
+
+const allCourses = students.flatMap(student => student.courses);
+// ["mathematics", "physics", "science", "mathematics", "physics", "biology"];
+const uniqueCourses1 = allCourses.filter(
+  (course, index, array) => array.indexOf(course) === index,
+);
+
+console.log(uniqueCourses1);
+
+console.log('-------------------');
+
+const books = [
+  {
+    title: 'The Last Kingdom',
+    author: 'Bernard Cornwell',
+    rating: 8.38,
+  },
+  {
+    title: 'Beside Still Waters',
+    author: 'Robert Sheckley',
+    rating: 8.51,
+  },
+  {
+    title: 'The Dream of a Ridiculous Man',
+    author: 'Fyodor Dostoevsky',
+    rating: 7.75,
+  },
+  { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+  { title: 'Enemy of God', author: 'Bernard Cornwell', rating: 8.67 },
+];
+
+const MIN_RATING = 8;
+const AUTHOR = 'Bernard Cornwell';
+
+const topRatedBooks = books.filter(el => el.rating >= MIN_RATING);
+const booksByAuthor = books.filter(el => {
+  if (el.author === AUTHOR) {
+    return el.title;
+  }
+});
+
+console.log(topRatedBooks);
+console.log(booksByAuthor);
+
+console.log('-------------------');

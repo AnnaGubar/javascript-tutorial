@@ -67,3 +67,19 @@ const byName = [...players].sort((a, b) => {
     return -1;
   }
 });
+
+console.log('---------------------');
+
+//* Сортировка слов с методом a.localeCompare(b)
+
+const students = ['Jacob', 'Artemis', 'Solomon', 'Adrian', 'Kai', 'Ganymede'];
+
+const inAlphabetOrder = [...students].sort((a, b) => a.localeCompare(b));
+console.log(inAlphabetOrder);
+// [ "Adrian", "Artemis", "Ganymede", "Jacob", "Kai", "Solomon" ]
+
+const inReversedOrder = [...students].sort((a, b) => b.localeCompare(a));
+console.log(inReversedOrder);
+// [ "Solomon", "Kai", "Jacob", "Ganymede", "Artemis", "Adrian" ]
+
+console.log('---------------------');

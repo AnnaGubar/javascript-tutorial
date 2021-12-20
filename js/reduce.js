@@ -103,3 +103,119 @@ const reduce = (array, cb, value) => {
 };
 
 console.log(reduce(tweets, callback, 0));
+
+console.log('---------------------');
+
+const playersF = {
+  mango: 1270,
+  poly: 468,
+  ajax: 710,
+  kiwi: 244,
+};
+const playtimes = Object.values(playersF);
+console.log(playtimes);
+
+const totalPlayTime = playtimes.reduce((x, nextX) => {
+  return x + nextX;
+}, 0);
+console.log(totalPlayTime);
+
+const averagePlayTime = totalPlayTime / playtimes.length;
+console.log(playtimes.length);
+console.log(averagePlayTime);
+
+console.log('---------------------');
+
+const playersS = [
+  { name: 'Mango', playtime: 1270, gamesPlayed: 4 },
+  { name: 'Poly', playtime: 469, gamesPlayed: 2 },
+  { name: 'Ajax', playtime: 690, gamesPlayed: 3 },
+  { name: 'Kiwi', playtime: 241, gamesPlayed: 1 },
+];
+
+const totalAveragePlaytimePerGame = playersS => {
+  const t = playersS.reduce((x, nextX) => {
+    const y = x + nextX.playtime;
+    return y / nextX.gamesPlayed;
+  }, 0);
+  return t;
+  // return t / ;
+};
+console.log(totalAveragePlaytimePerGame(playersS)); // 1023
+
+console.log('---------------------');
+
+const z = [
+  {
+    name: 'Moore Hensley',
+    email: 'moorehensley@indexia.com',
+    eyeColor: 'blue',
+    friends: ['Sharron Pace'],
+    isActive: false,
+    balance: 2811,
+    gender: 'male',
+  },
+  {
+    name: 'Sharlene Bush',
+    email: 'sharlenebush@tubesys.com',
+    eyeColor: 'blue',
+    friends: ['Briana Decker', 'Sharron Pace'],
+    isActive: true,
+    balance: 3821,
+    gender: 'female',
+  },
+  {
+    name: 'Ross Vazquez',
+    email: 'rossvazquez@xinware.com',
+    eyeColor: 'green',
+    friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+    isActive: false,
+    balance: 3793,
+    gender: 'male',
+  },
+  {
+    name: 'Elma Head',
+    email: 'elmahead@omatom.com',
+    eyeColor: 'green',
+    friends: ['Goldie Gentry', 'Aisha Tran'],
+    isActive: true,
+    balance: 2278,
+    gender: 'female',
+  },
+  {
+    name: 'Carey Barr',
+    email: 'careybarr@nurali.com',
+    eyeColor: 'blue',
+    friends: ['Jordan Sampson', 'Eddie Strong'],
+    isActive: true,
+    balance: 3951,
+    gender: 'male',
+  },
+  {
+    name: 'Blackburn Dotson',
+    email: 'blackburndotson@furnigeer.com',
+    eyeColor: 'brown',
+    friends: ['Jacklyn Lucas', 'Linda Chapman'],
+    isActive: false,
+    balance: 1498,
+    gender: 'male',
+  },
+  {
+    name: 'Sheree Anthony',
+    email: 'shereeanthony@kog.com',
+    eyeColor: 'brown',
+    friends: ['Goldie Gentry', 'Briana Decker'],
+    isActive: true,
+    balance: 2764,
+    gender: 'female',
+  },
+];
+
+const calculateTotalBalance = users => {
+  const r = users.reduce((x, y) => {
+    return x + y.friends.length;
+  }, 0);
+  return r;
+};
+
+console.log(calculateTotalBalance(z)); // 14

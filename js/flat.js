@@ -41,3 +41,5 @@ const stats = tweets
   );
 
 console.log(stats);
+
+console.log('-----------------------------------');

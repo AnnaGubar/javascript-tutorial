@@ -92,3 +92,28 @@ const logger = (player, index, array) => {
 };
 
 map(players, logger);
+
+console.log('-------------------');
+
+const users = [
+  {
+    name: 'Moore Hensley',
+    email: 'moorehensley@indexia.com',
+  },
+  {
+    name: 'Elma Head',
+    email: 'elmahead@omatom.com',
+  },
+  {
+    name: 'Sheree Anthony',
+    email: 'shereeanthony@kog.com',
+  },
+];
+
+const getUserNames = users => {
+  const x = [];
+  users.map(el => x.push(el.name));
+  return x;
+};
+
+console.log(getUserNames(users));
