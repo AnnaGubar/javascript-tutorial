@@ -296,3 +296,126 @@ const atTheOldToad = {
 //[{ name: "Speed potion", price: 460 }, { name: "Dragon breath", price: 780 }, { name: "Invulnerability potion", price: 520 } ]
 
 // console.log(atTheOldToad.getPotions());
+
+console.log('----------------------');
+
+//* Напишите код для суммирования всех зарплат и сохраните его результат в переменной sum. Если объект salaries пуст, то результат должен быть 0
+
+const salaries = {
+  Mango: 100,
+  Poly: 160,
+  Ajax: 1470,
+};
+
+const values9 = Object.values(salaries);
+console.log(values);
+
+let total = 0;
+
+for (const value of values9) {
+  total += value;
+}
+
+console.log('for...of:', total);
+
+const sum = values9.reduce((previousValue, element) => {
+  return previousValue + element;
+}, 0);
+
+console.log('reduce:', sum);
+
+//* Напишите ф-цию calcTotalPrice(stones, stonesName), которая принимает массив объектов и строку с названием камня. Функция считает м возвращает общую стоимость камней с таким именем, ценой и количеством из объекта
+
+const stones = [
+  { name: 'Изумруд', price: 1300, quantity: 4 },
+  { name: 'Бриллиант', price: 2700, quantity: 6 },
+  { name: 'Сапфир', price: 400, quantity: 7 },
+  { name: 'Щебень', price: 150, quantity: 100 },
+];
+
+const calcTotalPrice = (stones, stonesName) => {
+  const arrStones = stones.filter(value => {
+    // console.log(value.name);
+    return value.name === stonesName;
+  });
+  console.log(arrStones[0]);
+
+  // return arrStones[0].price * arrStones[0].quantity;
+
+  const { price, quantity } = arrStones[0];
+  return price * quantity;
+};
+
+console.log(calcTotalPrice(stones, 'Сапфир')); // 2800
+
+console.log('----------------------');
+
+//* Создайте объект calculator с тремя методами read(a, b) - принимает два аргумента и сохраняет их как свойства объекта sum() возвращает сумму сохраненных значений mult() перемножает сохраненные значения и возвращает результат
+
+const calculator = {
+  read(a = 0, b = 0) {
+    this.value1 = a;
+    this.value2 = b;
+  },
+  sum() {
+    // if (this.value1 === undefined && this.value2 === undefined) {
+    //   return 0;
+    // }
+    // if (!this.value1) {
+    //   this.value1 = 0;
+    // }
+    // if (!this.value2) {
+    //   this.value2 = 0;
+    // }
+
+    return this.value1 + this.value2;
+  },
+  mult() {
+    return this.value1 * this.value2;
+  },
+  devine() {
+    return this.value1 && this.value2 ? this.value1 / this.value2 : 0;
+  },
+  pow() {
+    return this.value1 && this.value2 ? this.value1 ** this.value2 : 0;
+  },
+};
+console.log(calculator.read(3, 0));
+console.log(calculator.sum());
+console.log(calculator.mult());
+console.log(calculator.devine());
+console.log(calculator.pow());
+
+console.log('----------------------');
+
+//* Напишите функцию updateObject, которая принимает объект и возвращает новый объект без указанного параметра. Ожидаемый результат ({a: 1. b: 2}, 'b') => {a: 1}
+
+const updateObject1 = (obj, objValue) => {
+  const newObj = { ...obj }; // сделали копию
+
+  console.log(obj === newObj);
+
+  delete newObj[objValue]; // изменение копии
+  return newObj;
+};
+
+console.log(updateObject1({ a: 1, b: 2 }, 'b'));
+
+console.log('----------------------');
+
+//* Напишите функцию updateObject, которая принимает объект и возвращает новый объект без указанных параметров
+
+const updateObject = (obj, ...objValue) => {
+  console.log(objValue);
+
+  const newObj = { ...obj }; // сделали копию
+
+  for (const value of objValue) {
+    delete newObj[value]; // удаление каждого value
+  }
+  return newObj;
+};
+
+console.log(updateObject({ a: 1, b: 2, c: 3, d: 4 }, 'b', 'c'));
+
+console.log('----------------------');
