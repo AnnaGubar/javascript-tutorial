@@ -4,12 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS</title>
+    <style>
+      body {
+        background: rgb(48, 36, 59);
+        color: rgb(21, 104, 116);
+      }
+
+      button {
+        margin: 10px;
+        font-size: 16px;
+        font-family: inherit;
+        cursor: pointer;
+      }
+
+      .counter {
+        display: flex;
+        align-items: center;
+      }
+
+      .counter > p {
+        margin: 0;
+        font-size: 48px;
+        font-family: monospace;
+      }
+    </style>
   </head>
   <body>
-    <h1>JavaScript</h1>
-    <!-- <script src="./js/typeof.js" type="module"></script> -->
-    <!-- <script src="./js/number.js" type="module"></script> -->
-    <!-- <script src="./js/string.js" type="module"></script> -->
-    <!-- <script src="./js/tasks.js" type="module"></script> -->
+    <h1>..... THIS .....</h1>
+
+    <div class="counter">
+      <button class="js-decrement">Уменьшить</button>
+      <p class="js-value">0</p>
+      <button class="js-increment">Увеличить</button>
+    </div>
+
+    <!-- <script src="./js/this.js" type="module"></script> -->
+    <!-- <script src="./js/call-apply-bind.js" type="module"></script> -->
+    <script src="./js/counter.js" type="module"></script>
   </body>
 </html>
