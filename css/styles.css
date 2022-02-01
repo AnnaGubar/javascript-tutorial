@@ -9,6 +9,8 @@ body {
     Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
   line-height: 1.5;
   color: #2a2a2a;
+  background-color: rgb(111, 155, 141);
+  font-size: 20px;
 }
 
 button,
@@ -20,7 +22,19 @@ input {
   font: inherit;
 }
 
+button,
+input {
+  background-color: rgb(214, 200, 180);
+  font-size: inherit;
+}
+
 .section {
   padding-top: 40px;
   padding-bottom: 40px;
+}
+
+.output {
+  width: 600px;
+  display: block;
+  margin-top: 10px;
 }

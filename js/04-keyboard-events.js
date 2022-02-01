@@ -9,12 +9,18 @@ const refs = {
   clearBtn: document.querySelector('.js-clear'),
 };
 
-window.addEventListener('keypress', onKeypress);
+// * только символьные
+// window.addEventListener('keypress', onKeypress);
+
+// * +служебные
+window.addEventListener('keydown', onKeypress);
+
 refs.clearBtn.addEventListener('click', onClearOutput);
 
 function onKeypress(event) {
-  // console.log('event.key: ', event.key);
-  // console.log('event.code: ', event.code);
+  // * event.key - зависит от языка
+  // * event.code - код клавиши
+  // console.log(event.key, event.code);
 
   refs.output.textContent += event.key;
 }

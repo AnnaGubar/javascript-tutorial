@@ -14,26 +14,35 @@ const refs = {
   btn: document.querySelector('.js-button'),
 };
 
+// * чаще для анимаций
 // refs.input.addEventListener('focus', onInputFocus);
 // refs.input.addEventListener('blur', onInputBlur);
+
+// function onInputFocus() {
+//   console.log('Инпут получил фокус - событие focus');
+// }
+
+// function onInputBlur() {
+//   console.log('Инпут потерял фокус - событие blur');
+// }
+
+// * результат получает при потере фокуса
+// * исп. на checkboxes, radiobuttons
 // refs.input.addEventListener('change', onInputChange);
-// refs.input.addEventListener('input', onInputChange);
 
+// * исп. для текстовых инпутов
 refs.input.addEventListener('input', onInputChange);
-refs.licenseCheckbox.addEventListener('change', onLicenseChange);
-
-function onInputFocus() {
-  console.log('Инпут получил фокус - событие focus');
-}
-
-function onInputBlur() {
-  console.log('Инпут потерял фокус - событие blur');
-}
 
 function onInputChange(event) {
+  console.log(event, event.currentTarget.value);
+
   refs.nameLabel.textContent = event.currentTarget.value;
 }
 
+refs.licenseCheckbox.addEventListener('change', onLicenseChange);
+
 function onLicenseChange(event) {
-  refs.btn.disabled = !event.currentTarget.checked;
+  refs.btn.disabled = !event.currentTarget.checked; // кнопка выкл когда эл не выбран
+
+  console.log(event.currentTarget.checked);
 }

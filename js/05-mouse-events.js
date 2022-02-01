@@ -9,13 +9,18 @@
 
 const boxRef = document.querySelector('.js-box');
 
-// boxRef.addEventListener('mouseover', onMouseEnter);
+boxRef.addEventListener('mouseenter', onMouseEnter); //желтый квадрат - нет смены класса
+
+// boxRef.addEventListener('mouseover', onMouseEnter);//желтый квадрат - есть смена класса
 // boxRef.addEventListener('mouseout', onMouseLeave);
+
 // boxRef.addEventListener('mousemove', onMouseMove);
 
 function onMouseEnter(event) {
   const box = event.currentTarget;
   box.classList.add('box--active');
+
+  console.log(event);
 }
 
 function onMouseLeave(event) {
