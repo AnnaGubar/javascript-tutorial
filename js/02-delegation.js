@@ -9,6 +9,8 @@ const container = document.querySelector('.js-container');
 container.addEventListener('click', onClick);
 
 function onClick(evt) {
+  console.log(evt.target.nodeName);
+
   if (evt.target.nodeName !== 'BUTTON') {
     return;
   }

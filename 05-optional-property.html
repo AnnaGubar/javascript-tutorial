@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Оператор необязательного свойства</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <style></style>
+  </head>
+  <body>
+    <script>
+      const settings = {
+        theme: {
+          userDefined: {
+            color: 'red',
+          },
+        },
+      };
+
+      if (settings && settings.theme && settings.theme.userDefined) {
+        console.log('settings - color is', settings.theme.userDefined.color);
+      }
+
+      if (settings.theme.userDefined) {
+        console.log('settings - color is', settings.theme.userDefined.color);
+      }
+
+      const emptyObj = {};
+
+      if (emptyObj && emptyObj.theme && emptyObj.theme.userDefined) {
+        console.log('emptyObj - color is', emptyObj.theme.userDefined.color);
+      } else {
+        console.log('emptyObj - there is no color');
+      }
+
+      console.log('settings - color is', settings?.theme?.userDefined?.color);
+      console.log('settings -', settings?.theme?.userDefined);
+      console.log('emptyObj - color is', emptyObj?.theme?.userDefined?.color);
+    </script>
+  </body>
+</html>

@@ -1,8 +1,4 @@
-/*
- * Делегирование
- * - один из многих
- * - несколько из многих и Set
- */
+//* - один из многих
 
 // const tagsContainer = document.querySelector('.js-tags');
 // let selectedTag = null;
@@ -27,8 +23,10 @@
 //   console.log(selectedTag);
 // }
 
+//* - несколько из многих и Set
+
 const tagsContainer = document.querySelector('.js-tags');
-const selectedTags = new Set();
+const selectedTags = new Set(); // ⬅ здесь работа со строками
 
 tagsContainer.addEventListener('click', onTagsContainerClick);
 

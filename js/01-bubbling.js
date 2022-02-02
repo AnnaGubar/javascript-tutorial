@@ -15,19 +15,22 @@ refs.child.addEventListener('click', onChildClick);
 refs.innerChild.addEventListener('click', onInnerChildClick);
 
 function onParentClick(evt) {
-  console.log('onParentClick');
+  console.groupCollapsed('onParentClick');
   console.log('onParentClick -> evt.target', evt.target);
   console.log('onParentClick -> evt.currentTarget', evt.currentTarget);
+  console.groupEnd();
 }
 
 function onChildClick(evt) {
-  console.log('onChildClick');
+  console.groupCollapsed('onChildClick');
   console.log('onChildClick -> evt.target', evt.target);
   console.log('onChildClick -> evt.currentTarget', evt.currentTarget);
+  console.groupEnd();
 }
 
 function onInnerChildClick(evt) {
-  console.log('onInnerChildClick');
+  console.groupCollapsed('onInnerChildClick');
   console.log('onInnerChildClick -> evt.target', evt.target);
   console.log('onInnerChildClick -> evt.currentTarget', evt.currentTarget);
+  console.groupEnd();
 }
