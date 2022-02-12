@@ -15,6 +15,7 @@
 
 import '../css/common.css';
 import pokemonCardTpl from '../templates/pokemon-card.hbs';
+console.log('⭐ ~ pokemonCardTpl', pokemonCardTpl);
 import API from './api-service';
 import getRefs from './get-refs';
 
