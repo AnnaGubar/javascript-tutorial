@@ -1,26 +1,18 @@
-### CRUD
+# js-22
 
-- Пакет [json-server](https://github.com/typicode/json-server)
-  - npm i --save-dev json-server - установка в терминале
-  - "server": "json-server --watch db.json" - прописать в папке package.json ->
-    в разделе scripts
-  - npm run server - запуск в терминале
-- Postman/Postwoman/Insomnia и т. д.
-- Работа с приватным API
-  - **C**reate
-    - Метод POST
-    - Тело
-    - Заголовки
-    - Ответ
-  - **R**ead
-    - Метод GET
-    - Ответ
-  - **U**pdate
-    - Методы PUT и PATCH
-    - Тело
-    - Заголовки
-    - Ответ
-  - **D**elete
-    - Метод DELETE
-    - Ответ
-- Цикл запрос-ответ
+- Обработка ошибок с try...catch
+  - Синтаксис
+  - Какие ошибки ловит
+    - ❌ время оценки (чтения) - ошибки парсинга (parsing errors)
+    - ✅ время выполнения скрипта - ошибки выполнения (runtime errors)
+    - [http://fecore.net.ua/books/m5ph3r-javascript/module-02/scope.html#hoisting](http://fecore.net.ua/books/m5ph3r-javascript/module-02/scope.html#hoisting)
+  - Ловит только ошибки в синхронном коде
+    - Как словить ошибку в асинхронном коде
+  - Объект ошибки
+    - name
+    - message
+    - stack
+  - Блок catch без ошибки
+  - Использование - грамотный парс JSON
+- Parceljs и async/await. Ошибка regenerator runtime
+- Синтаксис async/await
