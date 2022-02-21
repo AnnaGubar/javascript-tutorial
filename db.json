@@ -144,6 +144,87 @@
       ],
       "rating": 9,
       "id": 21
+    },
+    {
+      "title": "my book",
+      "author": "me",
+      "genres": [
+        "JS"
+      ],
+      "rating": 10,
+      "id": 22
+    },
+    {
+      "title": "Тестовая книга по CSS",
+      "author": "Я",
+      "genres": [
+        "CSS"
+      ],
+      "rating": 9,
+      "id": 23
+    },
+    {
+      "title": "Тестовая книга по HTML",
+      "author": "Я",
+      "genres": [
+        "HTML"
+      ],
+      "rating": 7,
+      "id": 24
+    },
+    {
+      "title": "Тестовая книга по CSS",
+      "author": "Я",
+      "genres": [
+        "CSS"
+      ],
+      "rating": 9,
+      "id": 25
+    },
+    {
+      "title": "Тестовая книга по CSS",
+      "author": "Я",
+      "genres": [
+        "CSS"
+      ],
+      "rating": 9,
+      "id": 26
+    },
+    {
+      "title": "Тестовая книга по CSS",
+      "author": "Я",
+      "genres": [
+        "CSS"
+      ],
+      "rating": 9,
+      "id": 27
+    },
+    {
+      "title": "Тестовая книга по HTML",
+      "author": "Я",
+      "genres": [
+        "HTML"
+      ],
+      "rating": 7,
+      "id": 28
+    },
+    {
+      "title": "Тестовая книга по HTML",
+      "author": "Я",
+      "genres": [
+        "HTML"
+      ],
+      "rating": 7,
+      "id": 29
+    },
+    {
+      "title": "Тестовая книга по CSS",
+      "author": "Я",
+      "genres": [
+        "CSS"
+      ],
+      "rating": 9,
+      "id": 30
     }
   ]
 }
